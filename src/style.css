@@ -1,15 +1,43 @@
+:root {
+  /* FONT */
+  --font-form-content-headline: normal normal 700 56px/1 "Roboto", sans-serif;
+  --font-form-content-description: normal normal 400 16px/1.5 "Roboto",
+    sans-serif;
+  --font-form-content-list-text: normal normal 400 16px/1.5 "Roboto", sans-serif;
+  --font-form-content-user-input-email: normal normal 700 12px/1.5 "Roboto",
+    sans-serif;
+  --font-form-content-user-input-email-placeholder: normal normal 400 16px/1.5
+      "Roboto",
+    sans-serif;
+  --font-form-content-user-input-button: normal normal 700 16px/1.5 "Roboto",
+    sans-serif;
+
+  /* COLOR */
+  --white: #ffffff;
+  --grey: #949494;
+  --blue-800: #242742;
+  --blue-700: #36384d;
+  --red: #ff6155;
+  --linear-gradient-left: #ff6a3a;
+  --linear-gradient-right: #ff527b;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--blue-700);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
 }
 
@@ -17,6 +45,114 @@ ul {
   list-style-type: none;
 }
 
+/* MAIN */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background-color: var(--white);
+  border-radius: 36px;
+  padding: 24px 32px;
+}
+
+/* FORM */
+#signup-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+/* FORM | CONTENT */
+.form--content {
+  width: 376px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form--content .headline {
+  font: var(--font-form-content-headline);
+  color: var(--blue-800);
+}
+
+.form--content .description {
+  font: var(--font-form-content-description);
+  color: var(--blue-800);
+}
+
+.form--content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form--content li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.form--content img {
+  width: 21px;
+  height: 21px;
+}
+
+.form--content .list-text {
+  font: var(--font-form-content-list-text);
+  color: var(--blue-800);
+}
+
+.form--content .user-input .user-input-email {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form--content .user-input .user-input-email label {
+  font: var(--font-form-content-user-input-email);
+  color: var(--blue-800);
+}
+
+.form--content .user-input .user-input-email input {
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+}
+
+.form--content .user-input .user-input-email input::placeholder {
+  font: var(--font-form-content-user-input-email-placeholder);
+  color: var(--grey);
+}
+
+.form--content .user-input button {
+  margin-top: 32px;
+  padding: 16px 70px;
+  width: 100%;
+  background-color: var(--blue-800);
+  border-radius: 8px;
+  border: none;
+}
+
+.form--content .user-input .button-text {
+  font: var(--font-form-content-user-input-button);
+  color: var(--white);
+}
+
+/* FORM | PICTURE */
+.form--picture {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ATTRIBUTION */
 .attribution {

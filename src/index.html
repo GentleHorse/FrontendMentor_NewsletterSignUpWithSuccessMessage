@@ -17,17 +17,66 @@
     </title>
 
     <link href="./style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer type="module" src="./script.js"></script>
   </head>
   <body>
-    <!-- Sign-up form start -->
+    <main>
+      <div class="card">
+        <form id="signup-form" novalidate>
+          <div class="form--content">
+            <h1 class="headline">Stay updated!</h1>
+            <p class="description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul>
+              <li>
+                <img src="/images/icon-list.svg" alt="icon list image" />
+                <p class="list-text">
+                  Product discovery and building what matters
+                </p>
+              </li>
+              <li>
+                <img src="/images/icon-list.svg" alt="icon list image" />
+                <p class="list-text">
+                  Measuring to ensure updates are a success
+                </p>
+              </li>
+              <li>
+                <img src="/images/icon-list.svg" alt="icon list image" />
+                <p class="list-text">And much more!</p>
+              </li>
+            </ul>
 
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
+            <div class="user-input">
+              <div class="user-input-email">
+                <label for="email">Email address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="email@company.com"
+                />
+              </div>
+              <button><p class="button-text">Subscribe to monthly newsletter</p></button>
+            </div>
+          </div>
 
-    <!-- Sign-up form end -->
+          <img
+            class="form--picture"
+            src="/images/illustration-sign-up-desktop.svg"
+            alt="sign up illustration desktop"
+          />
+        </form>
+      </div>
+    </main>
 
     <!-- Success message start -->
 

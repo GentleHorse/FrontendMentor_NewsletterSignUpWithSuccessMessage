@@ -39,6 +39,9 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [Resources](#resources)
   - [CSS | Box shadow](#css--box-shadow)
   - [CSS | Grid layout](#css--grid-layout)
+  - [CSS | Gradient](#css--gradient)
+  - [Client-side from validation](#client-side-from-validation)
+  - [Third-party form validation](#third-party-form-validation)
 - [Author](#author)
 
 ## Overview
@@ -594,6 +597,21 @@ toggleButton.addEventListener("click", () => {
 - [MDN Docs | CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout)
 - [grid-auto-flow : CSS Grid :: flex-direction : Flexbox](https://css-tricks.com/grid-auto-flow-css-grid-flex-direction-flexbox/)
 - [From Zero to Grid Hero: An Illustrated Guide](https://blog.bitsrc.io/from-zero-to-grid-hero-illustrated-guide-to-css-grid-essentials-cd1531b56431)
+
+### CSS | Gradient
+- [CSS Gradient](https://cssgradient.io/)
+- [Using CSS gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+
+### Client-side from validation
+
+- [How to Build and Validate Beautiful Forms](https://www.freecodecamp.org/news/build-and-validate-beautiful-forms-with-vanilla-html-css-js/)
+- [Built-in form validation examples](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+
+### Third-party form validation
+
+- [Validator.js](https://github.com/jaywcjlove/validator.js)
+- [Just-Validate](https://github.com/horprogs/Just-validate)
+- [Bouncer](https://github.com/cferdinandi/bouncer)
 
 ## Author
 
