@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* ATTRIBUTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
