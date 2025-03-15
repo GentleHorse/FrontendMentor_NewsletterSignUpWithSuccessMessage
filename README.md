@@ -49,7 +49,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Links
 
-- Live Site URL: [Live site](https://frontend-mentor-article-preview-component-ruby.vercel.app/)
+- Live Site URL: [Live site]()
 
 ### Built with
 
@@ -90,6 +90,8 @@ npm install -D vite-plugin-restart
 ```
 
 ### Create vite config file
+
+**vite.config.js**
 
 ```
 
