@@ -37,12 +37,14 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [JavaScript](#javascript)
   - [Toggle element(s) by clicking](#toggle-elements-by-clicking)
   - [Retrieving data from the form](#retrieving-data-from-the-form)
+  - [Email validation](#email-validation)
 - [Resources](#resources)
   - [CSS | Box shadow](#css--box-shadow)
   - [CSS | Grid layout](#css--grid-layout)
   - [CSS | Gradient](#css--gradient)
   - [Client-side from validation](#client-side-from-validation)
   - [Third-party form validation](#third-party-form-validation)
+  - [Regular expression syntax](#regular-expression-syntax)
 - [Author](#author)
 
 ## Overview
@@ -177,18 +179,17 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, p {
+h1,
+h2,
+p,
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
 
 ul {
-  padding: 0;
   list-style-type: none;
-}
-
-ol {
-  padding: 0;
 }
 
 button {
@@ -316,6 +317,34 @@ td:nth-child(odd) {
   color: hsl(14, 45%, 36%);
   padding: 0 16px 0 8px;
 }
+
+```
+
+### Flex layout - change order
+
+```
+
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.child:nth-of-type(1) {
+  order: 3;
+}
+
+.child:nth-of-type(2) {
+  order: 1;
+}
+
+.child:nth-of-type(3) {
+  order: 4;
+}
+
+.child:nth-of-type(4) {
+  order: 2;
+}
+
 
 ```
 
@@ -606,6 +635,17 @@ form.addEventListener("submit", handleSubmit);
 
 ```
 
+### Email validation
+
+```
+
+function emailValidation(email) {
+  const isValidEmail = /^\S+@\S+$/g;
+  return isValidEmail.test(email);
+}
+
+```
+
 ## Resources
 
 ### CSS | Box shadow
@@ -633,6 +673,10 @@ form.addEventListener("submit", handleSubmit);
 - [Validator.js](https://github.com/jaywcjlove/validator.js)
 - [Just-Validate](https://github.com/horprogs/Just-validate)
 - [Bouncer](https://github.com/cferdinandi/bouncer)
+
+### Regular expression syntax
+
+- [Regular expression syntax cheat sheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet)
 
 ## Author
 

@@ -1,6 +1,8 @@
 :root {
   /* FONT */
   --font-form-content-headline: normal normal 700 56px/1 "Roboto", sans-serif;
+  --font-form-content-headline-mobile: normal normal 700 40px/1 "Roboto",
+    sans-serif;
   --font-form-content-description: normal normal 400 16px/1.5 "Roboto",
     sans-serif;
   --font-form-content-list-text: normal normal 400 16px/1.5 "Roboto", sans-serif;
@@ -36,13 +38,10 @@ body {
 
 h1,
 h2,
-p {
-  margin: 0;
-  padding: 0;
-}
-
+p,
 ul,
 ol {
+  margin: 0;
   padding: 0;
 }
 
@@ -61,12 +60,14 @@ main {
 
 /* CARD */
 .card {
+  box-sizing: border-box;
   background-color: var(--white);
   border-radius: 36px;
 }
 
 /* CARD | SIGNUP */
 .card.signup {
+  width: 904px;
   padding: 24px 32px;
 }
 
@@ -75,7 +76,6 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   gap: 64px;
 }
 
@@ -153,7 +153,7 @@ main {
 }
 
 .form--content .user-input button {
-  margin-top: 32px;
+  margin-top: 24px;
   padding: 16px 70px;
   width: 100%;
   background-color: var(--blue-800);
@@ -169,8 +169,12 @@ main {
 /* FORM | PICTURE */
 .form--picture {
   width: 400px;
-  height: 100%;
-  object-fit: cover;
+  height: 593px;
+  border-radius: 16px;
+  background-image: url(/images/illustration-sign-up-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* CARD | SUCCESS */
@@ -222,4 +226,111 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE LAYOUT | TABLET */
+@media only screen and (max-width: 1024px) {
+  /* CARD | SIGNUP */
+  .card.signup {
+    width: 608px;
+    padding: 40px;
+  }
+
+  /* FORM */
+  #signup-form {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* FORM | CONTENT */
+  .form--content {
+    order: 2;
+    width: 528px;
+    gap: 24px;
+  }
+
+  .form--content .user-input button {
+    margin-top: 16px;
+  }
+
+  /* FORM | PICTURE */
+  .form--picture {
+    order: 1;
+    width: 100%;
+    height: 358px;
+    border-radius: 16px;
+    background-image: url(/images/illustration-sign-up-mobile.svg);
+  }
+}
+
+/* RESPONSIVE LAYOUT | SMARTPHONE */
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: var(--white);
+  }
+
+  /* MAIN */
+  main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  /* CARD */
+  .card {
+    border-radius: 0 0 36px 36px;
+  }
+
+  /* CARD | SIGNUP */
+  .card.signup {
+    width: 100vw;
+    padding: 0;
+  }
+
+  /* FORM | CONTENT */
+  .form--content {
+    box-sizing: border-box;
+    order: 2;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .form--content .headline {
+    font: var(--font-form-content-headline-mobile);
+  }
+
+  .form--content .user-input .user-input-email {
+    margin-top: 16px;
+  }
+
+  .form--content .user-input button {
+    margin: 24px 0 44px 0;
+    padding: 16px 47px;
+  }
+
+  /* FORM | PICTURE */
+  .form--picture {
+    height: 284px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  /* CARD | SUCCESS */
+  .card.success {
+    padding: 149px 24px 70px 24px;
+  }
+
+  .success-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .success-wrapper button {
+    margin-top: 263px;
+    padding: 16px 100px;
+  }
 }
