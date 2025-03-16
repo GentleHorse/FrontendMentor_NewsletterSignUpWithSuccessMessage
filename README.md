@@ -55,7 +55,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Links
 
-- Live Site URL: [Live site]()
+- Live Site URL: [Live site](https://frontend-mentor-newsletter-sign-up-with-success-message-eight.vercel.app/)
 
 ### Built with
 
