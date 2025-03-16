@@ -10,6 +10,8 @@ successCard.style.display = "none";
 signupButton.addEventListener("click", (event) => {
   event.preventDefault();
 
+  
+
   signupCard.style.display = "none";
   successCard.style.display = "block";
 });
