@@ -11,6 +11,11 @@
     sans-serif;
   --font-form-content-user-input-button: normal normal 700 16px/1.5 "Roboto",
     sans-serif;
+  --font-success-title: normal normal 700 56px/1 "Roboto", sans-serif;
+  --font-success-description: normal normal 400 16px/1.5 "Roboto", sans-serif;
+  --font-success-description-bold: normal normal 700 16px/1.5 "Roboto",
+    sans-serif;
+  --font-success-dismiss-button: normal normal 700 16px/1.5 "Roboto", sans-serif;
 
   /* COLOR */
   --white: #ffffff;
@@ -58,6 +63,10 @@ main {
 .card {
   background-color: var(--white);
   border-radius: 36px;
+}
+
+/* CARD | SIGNUP */
+.card.signup {
   padding: 24px 32px;
 }
 
@@ -152,6 +161,48 @@ main {
   width: 400px;
   height: 100%;
   object-fit: cover;
+}
+
+/* CARD | SUCCESS */
+.card.success {
+  padding: 60px 64px;
+}
+
+.success-wrapper {
+  width: 376px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.success-wrapper img {
+  width: 64px;
+  height: 64px;
+}
+
+.success-wrapper h1 {
+  font: var(--font-success-title);
+  color: var(--blue-800);
+}
+
+.success-wrapper p {
+  font: var(--font-success-description);
+  color: var(--blue-800);
+}
+
+.success-wrapper span {
+  font: var(--font-success-description-bold);
+}
+
+.success-wrapper button {
+  padding: 18px 124px 14px 124px;
+  width: 100%;
+  background-color: var(--blue-800);
+  border-radius: 8px;
+  border: none;
+  font: var(--font-success-dismiss-button);
+  color: var(--white);
 }
 
 /* ATTRIBUTION */

@@ -29,7 +29,7 @@
   </head>
   <body>
     <main>
-      <div class="card">
+      <div id="card-signup" class="card signup">
         <form id="signup-form" novalidate>
           <div class="form--content">
             <h1 class="headline">Stay updated!</h1>
@@ -65,7 +65,9 @@
                   placeholder="email@company.com"
                 />
               </div>
-              <button><p class="button-text">Subscribe to monthly newsletter</p></button>
+              <button id="signup-button">
+                <p class="button-text">Subscribe to monthly newsletter</p>
+              </button>
             </div>
           </div>
 
@@ -76,15 +78,20 @@
           />
         </form>
       </div>
+
+      <div id="card-success" class="card success">
+        <div class="success-wrapper">
+          <img src="/images/icon-success.svg" />
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <span>ash@loremcompany.com</span>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+          <button id="dismiss-button">Dismiss message</button>
+        </div>
+      </div>
     </main>
-
-    <!-- Success message start -->
-
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
-
-    <!-- Success message end -->
 
     <footer>
       <div class="attribution">
