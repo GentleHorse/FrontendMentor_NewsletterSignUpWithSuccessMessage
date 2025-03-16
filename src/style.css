@@ -159,9 +159,6 @@ main {
   background-color: var(--blue-800);
   border-radius: 8px;
   border: none;
-}
-
-.form--content .user-input .button-text {
   font: var(--font-form-content-user-input-button);
   color: var(--white);
 }
