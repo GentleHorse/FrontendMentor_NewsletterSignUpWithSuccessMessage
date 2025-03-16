@@ -36,6 +36,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Responsive design - "Mobile First"](#responsive-design---mobile-first)
 - [JavaScript](#javascript)
   - [Toggle element(s) by clicking](#toggle-elements-by-clicking)
+  - [Retrieving data from the form](#retrieving-data-from-the-form)
 - [Resources](#resources)
   - [CSS | Box shadow](#css--box-shadow)
   - [CSS | Grid layout](#css--grid-layout)
@@ -586,6 +587,25 @@ toggleButton.addEventListener("click", () => {
 
 ```
 
+### Retrieving data from the form
+
+```
+
+const form = document.getElementById("form");
+
+const handleSubmit = (e) => {
+  e.preventDefault(e);
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+
+  console.log(data);
+};
+
+form.addEventListener("submit", handleSubmit);
+
+```
+
 ## Resources
 
 ### CSS | Box shadow
@@ -599,6 +619,7 @@ toggleButton.addEventListener("click", () => {
 - [From Zero to Grid Hero: An Illustrated Guide](https://blog.bitsrc.io/from-zero-to-grid-hero-illustrated-guide-to-css-grid-essentials-cd1531b56431)
 
 ### CSS | Gradient
+
 - [CSS Gradient](https://cssgradient.io/)
 - [Using CSS gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 

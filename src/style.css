@@ -126,15 +126,25 @@ main {
   gap: 8px;
 }
 
-.form--content .user-input .user-input-email label {
+.form--content .user-input .user-input-email .email-label {
   font: var(--font-form-content-user-input-email);
+  display: flex;
+  justify-content: space-between;
+}
+
+.form--content .user-input .user-input-email .email-label label {
   color: var(--blue-800);
+}
+
+.form--content .user-input .user-input-email .email-label p {
+  color: var(--red);
 }
 
 .form--content .user-input .user-input-email input {
   padding: 16px 24px;
   border-radius: 8px;
   border: 1px solid var(--grey);
+  color: #242742;
 }
 
 .form--content .user-input .user-input-email input::placeholder {
