@@ -7,6 +7,7 @@ const emailInputErrorMessage = document.getElementById(
   "email-input-error-message"
 );
 const singupForm = document.getElementById("signup-form");
+const inputUserEmailAddress = document.getElementById("input-user-email-address");
 
 // Default status
 signupCard.style.display = "block";
@@ -47,6 +48,9 @@ function handleSignupFormHandleSubmit(event) {
     emailUserInput.style.border = "1px solid #949494";
     emailUserInput.style.backgroundColor = "#ffffff";
     emailUserInput.style.color = "#242742";
+
+    // Replace with user input email
+    inputUserEmailAddress.innerHTML = email; 
 
     // Clear user input
     event.target.email.value = "";
