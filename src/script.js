@@ -6,8 +6,10 @@ const emailUserInput = document.getElementById("email");
 const emailInputErrorMessage = document.getElementById(
   "email-input-error-message"
 );
-const singupForm = document.getElementById("signup-form");
-const inputUserEmailAddress = document.getElementById("input-user-email-address");
+const signupForm = document.getElementById("signup-form");
+const inputUserEmailAddressInSuccessMessage = document.getElementById(
+  "input-user-email-address"
+);
 
 // Default status
 signupCard.style.display = "block";
@@ -28,6 +30,20 @@ function emailValidation(email) {
   return isValidEmail.test(email);
 }
 
+function errorStateStyling() {
+  emailInputErrorMessage.style.display = "block";
+  emailUserInput.style.border = "1px solid #ff6155";
+  emailUserInput.style.backgroundColor = "#ff615510";
+  emailUserInput.style.color = "#ff6155";
+}
+
+function defaultStateStyling() {
+  emailInputErrorMessage.style.display = "none";
+  emailUserInput.style.border = "1px solid #949494";
+  emailUserInput.style.backgroundColor = "#ffffff";
+  emailUserInput.style.color = "#242742";
+}
+
 function handleSignupFormHandleSubmit(event) {
   event.preventDefault();
 
@@ -35,22 +51,14 @@ function handleSignupFormHandleSubmit(event) {
   const { email } = Object.fromEntries(formData);
 
   if (!email || !emailValidation(email)) {
-    // Error state styling
-    emailInputErrorMessage.style.display = "block";
-    emailUserInput.style.border = "1px solid #ff6155";
-    emailUserInput.style.backgroundColor = "#ff615510";
-    emailUserInput.style.color = "#ff6155";
+    errorStateStyling();
   }
 
   if (email && emailValidation(email)) {
-    // Bring back to default styling
-    emailInputErrorMessage.style.display = "none";
-    emailUserInput.style.border = "1px solid #949494";
-    emailUserInput.style.backgroundColor = "#ffffff";
-    emailUserInput.style.color = "#242742";
+    defaultStateStyling();
 
     // Replace with user input email
-    inputUserEmailAddress.innerHTML = email; 
+    inputUserEmailAddressInSuccessMessage.innerHTML = email;
 
     // Clear user input
     event.target.email.value = "";
@@ -61,7 +69,7 @@ function handleSignupFormHandleSubmit(event) {
   }
 }
 
-singupForm.addEventListener("submit", handleSignupFormHandleSubmit);
+signupForm.addEventListener("submit", handleSignupFormHandleSubmit);
 
 dismissButton.addEventListener("click", () => {
   signupCard.style.display = "block";

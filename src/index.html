@@ -29,7 +29,7 @@
   </head>
   <body>
     <main>
-      <div id="card-signup" class="card signup">
+      <section id="card-signup" class="card signup">
         <form id="signup-form" novalidate>
           <div class="form--content">
             <h1 class="headline">Stay updated!</h1>
@@ -38,19 +38,19 @@
             </p>
             <ul>
               <li>
-                <img src="/images/icon-list.svg" alt="icon list image" />
+                <img src="/images/icon-list.svg" alt="check mark icon" />
                 <p class="list-text">
                   Product discovery and building what matters
                 </p>
               </li>
               <li>
-                <img src="/images/icon-list.svg" alt="icon list image" />
+                <img src="/images/icon-list.svg" alt="check mark icon" />
                 <p class="list-text">
                   Measuring to ensure updates are a success
                 </p>
               </li>
               <li>
-                <img src="/images/icon-list.svg" alt="icon list image" />
+                <img src="/images/icon-list.svg" alt="check mark icon" />
                 <p class="list-text">And much more!</p>
               </li>
             </ul>
@@ -59,7 +59,7 @@
               <div class="user-input-email">
                 <div class="email-label">
                   <label for="email">Email address</label>
-                  <p id="email-input-error-message">Valid email required</p>
+                  <p id="email-input-error-message" aria-describedby="email">Valid email required</p>
                 </div>
 
                 <input
@@ -77,9 +77,9 @@
 
           <div class="form--picture"></div>
         </form>
-      </div>
+      </section>
 
-      <div id="card-success" class="card success">
+      <section id="card-success" class="card success">
         <div class="success-wrapper">
           <img src="/images/icon-success.svg" alt="success icon image" />
           <h1>Thanks for subscribing!</h1>
@@ -91,7 +91,7 @@
           </p>
           <button id="dismiss-button">Dismiss message</button>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>
